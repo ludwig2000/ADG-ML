@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 
 class LogisticRegression:
 
@@ -16,7 +16,7 @@ class LogisticRegression:
         #gradient descent
         for _ in range(self.n_iters):
             linear_model=np.dot(X,self.weights)+self.bias
-            y_predicted=self._sigmoid(linear_model) 
+            y_predicted=self._sigmoid(linear_model)
             dw=(1/n_samples)*np.dot(X.T,(y_predicted-y))
             db=(1/n_samples)*np.sum(y_predicted-y)
 
